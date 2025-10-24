@@ -1,0 +1,42 @@
+DEPLOYMENT FILES CHECKLIST FOR NETLIFY
+========================================
+
+When you export READY_TO_DEPLOY_DIST, you MUST have these 8 items:
+
+ROOT LEVEL (7 files):
+✓ index.html
+✓ manifest.json
+✓ sw.js
+✓ offline.html
+✓ browserconfig.xml
+✓ TIW Logo with Stylized Globe.png
+
+FOLDERS (1 folder):
+✓ assets/ (THIS FOLDER MUST CONTAIN 2 FILES)
+  - assets/index-llQMtvZE.js
+  - assets/index-Ba30XAOS.css
+
+TOTAL: 7 files + 1 folder (with 2 files inside) = 9 files total
+
+---
+
+IF ASSETS FOLDER IS MISSING AFTER EXPORT:
+1. Go back to the app
+2. Right-click on "READY_TO_DEPLOY_DIST" folder
+3. Select "Export" or "Download"
+4. Make sure "Include subfolders" is checked
+5. Extract the downloaded file
+6. Open the folder and verify "assets" folder exists
+
+---
+
+TO DEPLOY ON NETLIFY:
+1. Extract/Open READY_TO_DEPLOY_DIST
+2. Select ALL 8 items (7 files + assets folder)
+3. Drag them to Netlify's deploy zone
+4. Do NOT drag the parent folder itself
+
+---
+
+ALTERNATIVE: Deploy the "dist" folder instead
+After running "npm run build", use the "dist" folder which is automatically created.
